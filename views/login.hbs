@@ -1,0 +1,56 @@
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Login</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+
+            <div class="col-lg-8 mt-5 mt-lg-0">
+
+                {{!-- <form action="/auth/login" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" name="email" placeholder="matti@matti.com" class="form-control" >
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="password" name="password" placeholder="********" class="form-control" >
+                        </div>
+
+                    </div>
+
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Login</button></div>
+                </form> --}}
+
+<h2>Login</h2>
+
+<form action="/auth/login" method="POST">
+
+    <label> Email
+        <input type="email" name="email" placeholder="matti@matti.com" />
+    </label>
+
+    <label>Password
+        <input type="password" name="password" placeholder="********" />
+    </label>
+
+    <button type="submit">Login</button>
+
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+</form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
